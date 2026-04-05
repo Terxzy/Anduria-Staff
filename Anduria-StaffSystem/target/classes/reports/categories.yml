@@ -1,0 +1,19 @@
+# ============================================================
+#  reports/categories.yml — Report kategorie
+# ============================================================
+categories:
+  CHEATING:
+    display: "&#FF4444Cheating"
+    permission: ""
+
+  BUG_ABUSE:
+    display: "&#FFFF00Bug Abuse"
+    permission: ""
+
+  CHAT:
+    display: "&#FFA500Chat"
+    permission: ""
+
+  OTHER:
+    display: "&7Jine"
+    permission: ""

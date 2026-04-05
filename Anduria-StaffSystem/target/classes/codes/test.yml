@@ -1,0 +1,22 @@
+# ============================================================
+#  codes/test.yml — Testovaci code s cooldownem
+# ============================================================
+name: "test"
+
+permission: ""
+
+one-time: false
+cooldown: 60
+max-uses: 0
+
+commands:
+  - "[message] &#00FF88Testovaci kod funguje! Hrac: %player%"
+  - "[console] say %player% pouzil testovaci kod"
+
+messages:
+  success:       "&aTestovaci kod uspesne pouzit!"
+  no-permission: "&cNa tento kod nemas opravneni."
+  already-used:  "&cTento kod jsi jiz pouzil."
+  cooldown:      "&cPockat jeste &e%time%&c."
+  max-uses:      "&cVyerpan."
+  not-found:     "&cKod neexistuje."

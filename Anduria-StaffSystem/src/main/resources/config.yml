@@ -1,0 +1,188 @@
+# ============================================================
+#  Anduria-StaffSystem — config.yml (hlavni konfigurace)
+#  Spigot/Paper 1.21.x | Java 21
+#  Podporuje: & barvy, &#RRGGBB hex, #RRGGBB hex
+# ============================================================
+
+# ---- GUI Menu -----------------------------------------------
+menu:
+  title: "&8Report hrace: &#FFD700%target%"
+  size: 27
+
+# ---- Plugin Messages ----------------------------------------
+messages:
+  no-permission:        "&cNa toto nemas opravneni."
+  no-nick-permission:   "&cNemas opravneni pouzit /nick."
+  no-vanish-permission: "&cNemas opravneni pouzit /vanish."
+  player-not-found:     "&cTento hrac neni online."
+  cannot-report-self:   "&cNemuzys reportnout sam sebe."
+  reload-success:       "&#00FF88Konfigurace byla uspesne znovu nactena."
+
+# ---- Staff Notification (zobrazi se staffum po reportu) -----
+staff-notify:
+  - "&8&m--------------------------------"
+  - "&#FF4444Novy report!"
+  - "&7Reporter:  &f%player%"
+  - "&7Target:    &f%target%"
+  - "&7Kategorie: &f%category%"
+  - "&7Cas:       &f%time%"
+  - "&8&m--------------------------------"
+
+# ---- GUI Items ----------------------------------------------
+items:
+
+  # Fillers — horni rada
+  filler_0:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 0
+    display_name: " "
+  filler_1:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 1
+    display_name: " "
+  filler_2:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 2
+    display_name: " "
+  filler_3:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 3
+    display_name: " "
+  filler_4:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 4
+    display_name: " "
+  filler_5:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 5
+    display_name: " "
+  filler_6:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 6
+    display_name: " "
+  filler_7:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 7
+    display_name: " "
+  filler_8:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 8
+    display_name: " "
+
+  # Fillers — dolni rada
+  filler_18:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 18
+    display_name: " "
+  filler_19:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 19
+    display_name: " "
+  filler_20:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 20
+    display_name: " "
+  filler_24:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 24
+    display_name: " "
+  filler_25:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 25
+    display_name: " "
+  filler_26:
+    material: BLACK_STAINED_GLASS_PANE
+    slot: 26
+    display_name: " "
+
+  # Report itemy
+  cheating:
+    material: DIAMOND_SWORD
+    slot: 11
+    display_name: "&#FF4444Cheating"
+    lore:
+      - "&7Klikni pro nahlaseni hrace"
+      - "&7za cheating."
+      - ""
+      - "&8Kategorie: &#FF4444CHEATING"
+    glow: true
+    report_category: "CHEATING"
+    close: true
+    left_click_commands:
+      - "[message] &#00FF88Nahlasil jsi hrace %target% za cheating."
+      - "[close]"
+    right_click_commands:
+      - "[message] &#00FF88Nahlasil jsi hrace %target% za cheating."
+      - "[close]"
+
+  bug_abuse:
+    material: PAPER
+    slot: 13
+    display_name: "&#FFFF00Bug Abuse"
+    lore:
+      - "&7Klikni pro nahlaseni hrace"
+      - "&7za bug abuse."
+      - ""
+      - "&8Kategorie: &#FFFF00BUG_ABUSE"
+    report_category: "BUG_ABUSE"
+    close: true
+    left_click_commands:
+      - "[message] &#00FF88Nahlasil jsi hrace %target% za bug abuse."
+      - "[close]"
+
+  chat:
+    material: BOOK
+    slot: 15
+    display_name: "&#FFA500Chat"
+    lore:
+      - "&7Klikni pro nahlaseni hrace"
+      - "&7za chat prestupek."
+      - ""
+      - "&8Kategorie: &#FFA500CHAT"
+    report_category: "CHAT"
+    close: true
+    left_click_commands:
+      - "[message] &#00FF88Nahlasil jsi hrace %target% za chat prestupek."
+      - "[close]"
+
+# ---- Dynamicke registrace commandu --------------------------
+commands:
+  code:
+    description: "Pouzij kod."
+    usage: "/code <kod>"
+    permission: "anduria.staffsystem.code.use"
+    aliases:
+      - "code"
+      - "kod"
+
+  create-code:
+    description: "Vytvor novy kod."
+    usage: "/create-code <kod>"
+    permission: "anduria.staffsystem.code.create"
+    aliases:
+      - "create-code"
+      - "newcode"
+      - "createcode"
+
+  staffchat:
+    description: "Odeslat zpravu do staffchatu."
+    usage: "/staffchat <zprava>"
+    permission: "anduria.staffsystem.staffchat"
+    aliases:
+      - "staffchat"
+      - "sc"
+
+  vanish:
+    description: "Prepnout vanish."
+    usage: "/vanish"
+    permission: "anduria.staffsystem.vanish"
+    aliases:
+      - "vanish"
+      - "v"
+
+  nick:
+    description: "Zmenit nick."
+    usage: "/nick <jmeno|reset>"
+    permission: "anduria.staffsystem.nick"
+    aliases:
+      - "nick"

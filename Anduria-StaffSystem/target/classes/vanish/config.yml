@@ -1,0 +1,8 @@
+# ============================================================
+#  vanish/config.yml — Vanish systém
+#  Permission: anduria.staffsystem.vanish
+#  Viditelnost pro: anduria.staffsystem.vanish.see
+# ============================================================
+vanish:
+  enabled-message:  "&aVanish zapnut."
+  disabled-message: "&cVanish vypnut."

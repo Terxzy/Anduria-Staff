@@ -1,0 +1,33 @@
+# ============================================================
+#  codes/vip.yml — Prikladovy VIP code
+# ============================================================
+name: "vip"
+
+# Opravneni, ktere hrac musi mit pro pouziti tohoto kodu.
+# Prazdny retezec = bez opravneni (vsichni mohou pouzit).
+permission: ""
+
+# Muze hrac pouzit kod pouze jednou?
+one-time: true
+
+# Cooldown v sekundach mezi opakovanymi pouzitimi (0 = zadny cooldown).
+# Ignorovano pokud je one-time: true
+cooldown: 0
+
+# Maximalni pocet pouziti celkove (0 = neomezeno).
+max-uses: 0
+
+# Commandy ktere se provedou po uspesnem pouziti.
+# Placeholdery: %player%, %time%
+commands:
+  - "[console] say %player% pouzil VIP kod!"
+  - "[message] &aGratulujeme! Ziskal jsi VIP."
+
+# Zpravy pro ruzne situace.
+messages:
+  success:       "&aUspesne jsi pouzil VIP kod."
+  no-permission: "&cNa tento kod nemas opravneni."
+  already-used:  "&cTento kod jsi jiz pouzil."
+  cooldown:      "&cTento kod muzys znovu pouzit za &e%time%&c."
+  max-uses:      "&cTento kod byl vyerpan (max pouziti dosazeno)."
+  not-found:     "&cTento kod neexistuje."

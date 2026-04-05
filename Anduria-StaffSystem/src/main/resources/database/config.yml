@@ -1,0 +1,12 @@
+# ============================================================
+#  database/config.yml — Databaze konfigurace
+# ============================================================
+database:
+  enabled: false
+  type: "MYSQL"
+  host: "localhost"
+  port: 3306
+  database: "anduria_staff"
+  username: "root"
+  password: "password"
+  table: "reports"

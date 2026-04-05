@@ -1,0 +1,19 @@
+# ============================================================
+#  nick/config.yml — Nick systém
+#  Prikaz: /nick <jmeno> | /nick reset
+#  Permission: anduria.staffsystem.nick
+#  Podporuje: & barvy, &#RRGGBB hex, #RRGGBB
+# ============================================================
+nick:
+  # Zprava po zmene nicku. Placeholder: %nick%
+  changed: "&aTvuj nick byl zmenen na &f%nick%&a."
+
+  # Zprava po resetu nicku.
+  reset: "&cTvuj nick byl resetnut."
+
+  # Zprava pri neplatnem nicku.
+  invalid: "&cNeplatny nick. Pouzivej pouze povolene znaky."
+
+  # Maximalni delka nicku (vcetne barevnych kodu).
+  # Tato hodnota se vztahuje na VIDITELNY text (bez color kodu).
+  max-length: 16

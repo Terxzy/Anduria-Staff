@@ -1,0 +1,14 @@
+# ============================================================
+#  staffchat/config.yml — StaffChat konfigurace
+#  Prikaz: /staffchat <zprava> (a aliasy)
+#  Pouze odesilani zprav, zadny toggle mod.
+# ============================================================
+staffchat:
+  enabled: true
+
+  # Format zpravy v staffchatu.
+  # Placeholdery: %player%, %message%
+  format: "&8[&#00BFFFStaffChat&8] &7%player%&8: &f%message%"
+
+  # Zprava zobrazena kdyz hrac nezada text.
+  usage: "&cPouziti: /staffchat <zprava>"

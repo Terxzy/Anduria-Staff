@@ -1,0 +1,13 @@
+# ============================================================
+#  reports/config.yml — Konfigurace report systemu
+#  Placeholdery: %player%, %target%, %category%, %time%
+# ============================================================
+
+# Zprava odeslana hracovi, ktery vytvořil report.
+reporter-message:
+  - "&8&m----------------------------"
+  - "&aUspesne jsi vytvoril report!"
+  - "&7Target:    &f%target%"
+  - "&7Kategorie: &f%category%"
+  - "&7Cas:       &f%time%"
+  - "&8&m----------------------------"

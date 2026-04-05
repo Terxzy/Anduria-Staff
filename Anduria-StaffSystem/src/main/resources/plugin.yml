@@ -1,0 +1,62 @@
+name: Anduria-StaffSystem
+version: '${project.version}'
+main: me.anduria.staffsystem.AnduriaStaffSystem
+api-version: '1.21'
+authors: [ Anduria ]
+description: Staff report, code, staffchat, vanish, nick system — fully config-driven.
+
+softdepend:
+  - PlaceholderAPI
+
+# Staticke prikazy (jadro pluginu — vzdy dostupne).
+# Staffchat, vanish, nick, code jsou registrovany DYNAMICKY z config.yml.
+commands:
+  report:
+    description: Report an online player.
+    usage: /report <player>
+    permission: anduria.staffsystem.report
+
+  astaff:
+    description: Admin GUI shortcut — supports offline targets.
+    usage: /astaff <player>
+    permission: anduria.staffsystem.admin
+
+  anduriastaff:
+    description: Main admin command (reload…).
+    usage: /anduriastaff <reload>
+    permission: anduria.staffsystem.reload
+
+permissions:
+  anduria.staffsystem.report:
+    description: Use /report.
+    default: true
+  anduria.staffsystem.admin:
+    description: Use /astaff.
+    default: op
+  anduria.staffsystem.reload:
+    description: Use /anduriastaff reload.
+    default: op
+  anduria.staffsystem.notify:
+    description: Receive staff report notifications.
+    default: op
+  anduria.staffsystem.staffchat:
+    description: Use /staffchat and see staff messages.
+    default: op
+  anduria.staffsystem.override:
+    description: Report offline/self players (testing).
+    default: op
+  anduria.staffsystem.code.use:
+    description: Use /code.
+    default: true
+  anduria.staffsystem.code.create:
+    description: Use /create-code.
+    default: op
+  anduria.staffsystem.vanish:
+    description: Use /vanish to toggle vanish.
+    default: op
+  anduria.staffsystem.vanish.see:
+    description: See vanished players.
+    default: op
+  anduria.staffsystem.nick:
+    description: Use /nick to change display name.
+    default: op
